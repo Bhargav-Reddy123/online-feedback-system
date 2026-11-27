@@ -1,5 +1,5 @@
 // After deploying the backend on Render, paste its URL below (without a trailing slash).
-const API_URL = "http://localhost:5000";
+const API_URL = "https://online-feedback-system-drtr.onrender.com";
 
 const form = document.getElementById("feedbackForm");
 const message = document.getElementById("message");
