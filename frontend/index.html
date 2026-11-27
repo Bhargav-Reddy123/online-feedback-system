@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Feedback System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><span class="brand-mark">F</span> FeedbackHub</div>
+    <span class="tag">STUDENT PORTAL</span>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <div class="eyebrow">YOUR VOICE MATTERS</div>
+      <h1>Share your <span>feedback.</span></h1>
+      <p>Help us make learning better. Tell us about your classroom experience.</p>
+    </section>
+
+    <section class="layout">
+      <form id="feedbackForm" class="form-card">
+        <div class="card-heading">
+          <div><h2>Feedback form</h2><p>All fields are required.</p></div>
+          <span class="form-icon">✎</span>
+        </div>
+
+        <label for="studentName">Student name</label>
+        <input id="studentName" name="studentName" type="text" placeholder="Enter your full name" required>
+
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject" required>
+          <option value="">Select a subject</option>
+          <option>Advanced Web Technology</option>
+          <option>Database Management System</option>
+          <option>Computer Networks</option>
+          <option>Operating Systems</option>
+          <option>Python Programming</option>
+        </select>
+
+        <label>Rate your experience</label>
+        <div class="rating" role="radiogroup" aria-label="Rating">
+          <label><input type="radio" name="rating" value="1" required><span>★</span></label>
+          <label><input type="radio" name="rating" value="2"><span>★</span></label>
+          <label><input type="radio" name="rating" value="3"><span>★</span></label>
+          <label><input type="radio" name="rating" value="4"><span>★</span></label>
+          <label><input type="radio" name="rating" value="5"><span>★</span></label>
+        </div>
+
+        <label for="comments">Your comments</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Write your feedback here..." required></textarea>
+
+        <button type="submit">Submit feedback <span>→</span></button>
+        <p id="message" class="message" aria-live="polite"></p>
+      </form>
+
+      <aside class="side-card">
+        <div class="side-icon">♡</div>
+        <h2>Every opinion counts.</h2>
+        <p>Your feedback helps teachers and institutions understand what is working and what can be improved.</p>
+        <div class="side-divider"></div>
+        <div class="benefit"><span>✓</span><div><b>Quick and easy</b><small>Submit feedback in just a few steps.</small></div></div>
+        <div class="benefit"><span>✓</span><div><b>Make a difference</b><small>Help improve the learning experience.</small></div></div>
+        <div class="benefit"><span>✓</span><div><b>View responses</b><small>See feedback submitted by students.</small></div></div>
+      </aside>
+    </section>
+
+    <section class="responses">
+      <div class="responses-heading"><div><h2>Recent feedback</h2><p>Feedback submitted through this form</p></div><span id="count" class="count">0 RESPONSES</span></div>
+      <div id="feedbackList"><p class="empty">No feedback submitted yet.</p></div>
+    </section>
+    <footer>Online Feedback System · Advanced Web Technology Mini Project</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
